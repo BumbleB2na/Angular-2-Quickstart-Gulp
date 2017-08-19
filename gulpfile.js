@@ -25,6 +25,7 @@ gulp.task('copy:libs', ['clean'], function() {
         'node_modules/@angular/forms/bundles/forms.umd.js',
         'node_modules/@angular/router/bundles/router.umd.js',
         'node_modules/@angular/common/bundles/common.umd.js',
+        'node_modules/@angular/compiler/bundles/compiler.umd.js',
         'node_modules/rxjs/**/*.js'
     ], {base: '.'})
     .pipe(gulp.dest('dist'))
