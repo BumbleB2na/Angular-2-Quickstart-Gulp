@@ -12,6 +12,7 @@ For now I like using the [Angular quickstart (seed project)](https://github.com/
 ## Files that were created:
 - [bs-config.dist.json](https://github.com/BumbleB2na/Angular-2-Quickstart-Gulp/blob/master/bs-config.dist.json)  <-- used in new package.json script to use 'dist' instead of 'src' folder during prod build
 - [gulpfile.js](https://github.com/BumbleB2na/Angular-2-Quickstart-Gulp/blob/master/gulpfile.js)  <-- used to compile and copy files from  (in tutorial directory run `gulp`)  
+- [index.dist.html](https://github.com/BumbleB2na/Angular-2-Quickstart-Gulp/blob/master/index.dist.html)  <-- used by gulp to copy a distribution version of index.html where base href can be modified
   
 # To use (Windows):
 1. `cd tutorial`  <-- this project does not sit at the root
@@ -24,7 +25,8 @@ To help integrate gulp I followed [this tutorial by Colin Eberhardt](http://blog
   
 I've diverged a bit from that tutorial and changed my dev and dist strategy as follows: 
 - do all linting and testing on development build
-- distribution build can be ran and watched same as development build to verify that it works before moving to server  
+- distribution build can be ran and watched same as development build to verify that it works before moving to server
+- alternate index.html file for distribution to get around having to manually update base href before copying dist folder contents to server  
   
 ## Gulp default task:
 1. Compiles src/app TypeScript files  (src is development folder)
