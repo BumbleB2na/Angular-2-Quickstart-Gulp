@@ -1,5 +1,5 @@
-//Used Angular 2 Quickstart seed and started working on Tour of Heroes tutorial project. It did not have anything set up for building a distribution version. It did not use gulp.
-//Then, followed this tutorial to build a distribution version using gulp and gulp plugin packages: http://blog.scottlogic.com/2015/12/24/creating-an-angular-2-build.html
+//Angular 2 Quickstart seed did not have anything set up for building a distribution version. It did not use gulp.
+//Loosely followed this tutorial to build a distribution version using gulp and gulp plugin packages: http://blog.scottlogic.com/2015/12/24/creating-an-angular-2-build.html
 
 const gulp = require('gulp');
 const del = require('del');
@@ -43,7 +43,7 @@ gulp.task('copy:node-modules', ['clean'], function() {
     .pipe(gulp.dest('dist'))
 });
 
-// copy static assets recursively (excluding TypeScript and Spec files and dist version of index.html) from src directory
+// copy static assets recursively (excluding Spec files and dist version of index.html) from src directory
 gulp.task('copy:static-assets', ['copy:node-modules'], function() {
     return gulp
       .src(['src/**/*', '!src/**/*.spec.*', '!src/index.dist.html'], {base: './src'})
